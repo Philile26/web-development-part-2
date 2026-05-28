@@ -19,4 +19,3 @@ About us (about.html).
 services(services.html)
 safety and features (safety.html).
 Enquiry Page (enquiry .html).
-
