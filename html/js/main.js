@@ -179,4 +179,18 @@ document.addEventListener("DOMContentLoaded", () => {
                 overlayNode.style.display = "flex";
                 setTimeout(() => {
                     overlayNode.style.opacity = "1";
-                    contentContainer.style.transform = "scale(
+                    contentContainer.style.transform = "scale(1)";
+                }, 50);
+            });
+        });
+
+        // Hide overlay handlers
+        overlayNode.addEventListener("click", () => {
+            overlayNode.style.opacity = "0";
+            contentContainer.style.transform = "scale(0.95)";
+            setTimeout(() => {
+                overlayNode.style.display = "none";
+            }, 300);
+        });
+    }
+});
