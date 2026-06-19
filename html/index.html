@@ -2,48 +2,69 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Soweto Taxi | Home</title>
-<link rel="stylesheet" href="../css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Soweto Commuter Hub | Premium Township Transit Information Desk</title>
+    <meta name="description" content="Welcome to the digital administrative portal for the Soweto Commuter Hub. Access active minibus taxi route schedules, transparent fare calculations, and report driver behavior.">
+    <meta name="keywords" content="Soweto transport, Baragwanath taxi rank, Soweto taxi routes, Johannesburg transit portal, minibus taxi scheduler">
+    
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <header>
-        <h1> Welcome to <span>Soweto Commuter Hub</span></h1>
-        <p>Reliable. Fast. Everywhere.</p>
+        <div class="header-container">
+            <h1>Soweto Commuter Hub</h1>
+            <p>Empowering Township Mobility with Premium, Safe, and Reliable Transit Insights.</p>
+        </div>
     </header>
 
-
     <nav>
-         <a href="index.html">Home</a> | 
-        <a href="routes.html">Routes & Pricing</a> | 
-        <a href="safety.html">Safety Features</a> | 
-        <a href="lost-found.html">Lost & Found</a> | 
-        <a href="feedback.html">Rate Your Driver</a>|
-        <a href="about.html">About Us</a>|
-        <a href="contact us.html">Contact Us</a>|
-       <a href="services.html">services</a>|
-       <a href="enquiry.html">enquiry</a>|
-    </nav><hr>
-    <img src="../assets/taxis.jpg" alt="Soweto Taxi" width="450px">
+        <div class="nav-container">
+            <a href="index.html" class="active">Home</a>
+            <a href="routes.html">Routes & Pricing</a>
+            <a href="safety.html">Safety Features</a>
+            <a href="lost-found.html">Lost & Found</a>
+            <a href="feedback.html">Rate Your Driver</a>
+            <a href="about.html">About Us</a>
+            <a href="contact us.html">Contact Us</a>
+            <a href="services.html">Services</a>
+            <a href="enquiry.html">Enquiry</a>
+        </div>
+    </nav>
 
     <main>
-        <section>
-            <h2>Find Your Ride</h2>
-            <p>Welcome to the official digital home for Soweto commuters. Whether you are heading to the CBD or just across the township, we help you get there safely and on time.</p>
-            <p><strong>Current Status:</strong> All routes operating normally at Bara, Maponya, and Dobsonville ranks.</p>
+        <section id="welcome-portal" class="card">
+            <h2>Welcome to the Commuter Portal</h2>
+            <p>The Soweto Commuter Hub provides real-time information to thousands of daily transit passengers traveling between Soweto, Johannesburg CBD, and neighboring provincial sectors. Our mission is to bridge the gap between commuter safety, transparency, and public transportation coordination.</p>
         </section>
-        
-        <section>
-            <h3>Why Use the Hub?</h3>
-            <ul>
-                <li>Check updated taxi fares before you board.</li>
-                <li>Report reckless driving instantly.</li>
-                <li>Track lost items left in vehicles.</li>
-            </ul>
+
+        <section id="media-showcase" class="card">
+            <h2>Transit Infrastructure Gallery</h2>
+            <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Click on any asset card below to launch the premium full-screen dynamic lightbox engine viewport.</p>
+            
+            <div class="responsive-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem;">
+                <div style="background: var(--bg-primary); padding: 1rem; border-radius: 6px; border: 1px solid var(--border-lux); text-align: center;">
+                    <img src="../assets/download.jpg" alt="Baragwanath Taxi Transport Facility Interchange Terminal Complex" class="lightbox-trigger" style="width: 100%; height: 180px; object-fit: cover; border-radius: 4px; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+                    <p style="font-size: 0.85rem; margin-top: 0.75rem; font-weight: 600; color: var(--accent-gold);">Bara Transport Hub</p>
+                </div>
+
+                <div style="background: var(--bg-primary); padding: 1rem; border-radius: 6px; border: 1px solid var(--border-lux); text-align: center;">
+                    <img src="../assets/taxis.jpg" alt="Certified Quantum Fleet Vehicles park coordinates line-up" class="lightbox-trigger" style="width: 100%; height: 180px; object-fit: cover; border-radius: 4px; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+                    <p style="font-size: 0.85rem; margin-top: 0.75rem; font-weight: 600; color: var(--accent-gold);">Operational Fleet Lineup</p>
+                </div>
+
+                <div style="background: var(--bg-primary); padding: 1rem; border-radius: 6px; border: 1px solid var(--border-lux); text-align: center;">
+                    <img src="../assets/th.webp" alt="Maponya Mall Passenger Assistance Terminal Drop-off Grid" class="lightbox-trigger" style="width: 100%; height: 180px; object-fit: cover; border-radius: 4px; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+                    <p style="font-size: 0.85rem; margin-top: 0.75rem; font-weight: 600; color: var(--accent-gold);">Maponya Mall Terminal</p>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Soweto Taxi Associations | Serving our community.</p>
+        <p>&copy; 2026 Soweto Transit Solutions | Built for WEDE5020 POE Evaluation Matrix</p>
     </footer>
+
+    <script src="../js/main.js"></script>
 </body>
 </html>

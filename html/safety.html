@@ -2,38 +2,92 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Safety First</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safety First | Soweto Commuter Hub</title>
     <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* Small localized utility to handle initial accordion visual states */
+        .accordion-body {
+            display: none;
+            padding: 1rem;
+            background-color: #fdfdfd;
+            border-left: 3px solid var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+        .accordion-header {
+            background-color: var(--secondary-color);
+            color: #fff;
+            padding: 0.75rem 1rem;
+            margin-bottom: 0.25rem;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: background-color 0.2s ease;
+        }
+        .accordion-header:hover {
+            background-color: #222;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Your Safety Matters</h1>
+        <div class="header-container">
+            <h1>Your Safety Matters</h1>
+            <p>Committed to providing safe, reliable transit frameworks across Soweto.</p>
+        </div>
     </header>
+
     <nav>
-        <a href="index.html">Home</a> | 
-        <a href="routes.html">Routes & Pricing</a> | 
-        <a href="safety.html">Safety Features</a> | 
-        <a href="lost-found.html">Lost & Found</a> | 
-        <a href="feedback.html">Rate Your Driver</a>|
-        <a href="about.html">About Us</a>|
-        <a href="contact us.html">Contact Us</a>|
-       <a href="services.html">services</a>|
-       <a href="enquiry.html">enquiry</a>|
+        <div class="nav-container">
+            <a href="index.html">Home</a>
+            <a href="routes.html">Routes & Pricing</a>
+            <a href="safety.html" class="active">Safety Features</a>
+            <a href="lost-found.html">Lost & Found</a>
+            <a href="feedback.html">Rate Your Driver</a>
+            <a href="about.html">About Us</a>
+            <a href="contact us.html">Contact Us</a>
+            <a href="services.html">Services</a>
+            <a href="enquiry.html">Enquiry</a>
+        </div>
     </nav>
 
     <main>
-        <h2>Commuter Rights</h2>
-        <img src="../assets/safety.jpg" alt="safety" width="400px">
-        <p>Every passenger in a Soweto taxi has the right to a safe journey. If you feel unsafe, use the tools below:</p>
-        <ul>
-            <li><strong>The "Front Seat" Rule:</strong> Ensure the driver is not using a mobile phone while driving.</li>
-            <li><strong>Overloading:</strong> Do not board a taxi that exceeds its legal capacity (15+1).</li>
-            <li><strong>Panic Button:</strong> Call our hotline at 0800-TAXI-SAFE for immediate assistance.</li>
-        </ul>
-    </main>
-    <footer>
-        <p>2026 Soweto Commuter Hub | Serving our community| Registered under the Soweto Taxi Association</p>
-    </footer>
-</body>
+        <section id="safety-charter" class="card">
+            <h2>Commuter Rights & Safety</h2>
+            <img src="../assets/safety.jpg" alt="Safety Features" class="gallery-thumb" style="max-width: 400px; width: 100%; display: block; margin: 1rem 0; border-radius: 4px; cursor: pointer;">
+            <p>Every passenger in a Soweto transit vehicle has the right to a secure, comfortable, and respectable journey. If you ever feel unsafe or encounter an operational issue, use the interactive tools and guidelines below:</p>
+        </section>
 
+        <section id="safety-accordion-hub" class="card alert-card">
+            <h2>Safety Guidelines & Protocols</h2>
+            <p style="margin-bottom: 1.5rem;">Click on any protocol guideline below to reveal specific compliance metrics and rapid-action tools.</p>
+
+            <div class="accordion-item">
+                <div class="accordion-header">The "Front Seat" Mobile Phone Rule</div>
+                <div class="accordion-body">
+                    <p>Ensure the driver is focused solely on the road. Commuters seated in the front row are encouraged to politely remind operators that mobile phone utilization while operating a public service vehicle violates provincial transit regulations.</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header">Overloading & Capacity Caps</div>
+                <div class="accordion-body">
+                    <p>Do not board an operational vehicle that exceeds its legal capacity limit (strictly capped at 15 passengers + 1 driver). Overloading compromises vehicular braking distance capabilities and voids commuter insurance allocations.</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header">Emergency Transit Panic Hotline</div>
+                <div class="accordion-body">
+                    <p>For immediate field intervention, tracking assistance, or security service dispatch, immediately phone our centralized toll-free support helpline at <strong>0800-TAXI-SAFE</strong>.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Soweto Commuter Hub | Serving our community | Registered under the Soweto Taxi Association</p>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
 </html>

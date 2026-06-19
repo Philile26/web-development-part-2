@@ -2,65 +2,90 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Our Services | Soweto Commuter Hub</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ==========================================================================
+       SEO Optimizations (Rubric Items 6, 7 & 8)
+       ========================================================================== -->
+    <title>Soweto Transit Catalog | Real-time Routes, Fares & Private Charter Booking</title>
+    <meta name="description" content="Browse our complete list of commuter transit options, cross-provincial long-distance taxi links, local ranks, and corporate charter solutions across Soweto.">
+    <meta name="keywords" content="Soweto commuter fare list, local taxi services, Maponya mall charters, Baragwanath courier operations, minibus price matrix">
+    
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <header>
-        <h1>Our Transit Services</h1>
-        <p>Providing versatile transport solutions for the Soweto community.</p>
+        <div class="header-container">
+            <h1>Our Transit Services</h1>
+            <p>Providing versatile transport solutions for the Soweto community.</p>
+        </div>
     </header>
 
     <nav>
-       <a href="index.html">Home</a> | 
-        <a href="routes.html">Routes & Pricing</a> | 
-        <a href="safety.html">Safety Features</a> | 
-        <a href="lost-found.html">Lost & Found</a> | 
-        <a href="feedback.html">Rate Your Driver</a>|
-        <a href="about.html">About Us</a>|
-        <a href="contact us.html">Contact Us</a>|
-       <a href="services.html">services</a>|
-       <a href="enquiry.html">enquiry</a>|
+        <div class="nav-container">
+            <a href="index.html">Home</a>
+            <a href="routes.html">Routes & Pricing</a>
+            <a href="safety.html">Safety Features</a>
+            <a href="lost-found.html">Lost & Found</a>
+            <a href="feedback.html">Rate Your Driver</a>
+            <a href="about.html">About Us</a>
+            <a href="contact us.html">Contact Us</a>
+            <a href="services.html" class="active">Services</a>
+            <a href="enquiry.html">Enquiry</a>
+        </div>
     </nav>
 
     <main>
-        <section id="commuter-transport">
-            <h2>1. Daily Commuter Transport</h2>
-            <img src="../assets/services.jpg" alt="service" width="400px">
-            <p>Our primary service involves high-frequency trips between Soweto residential areas and major economic hubs.</p>
-            <ul>
-                <li><strong>Local Routes:</strong> Internal Soweto travel (e.g., Jabulani to Meadowlands).</li>
-                <li><strong>Long Distance:</strong> Daily trips to Johannesburg CBD, Sandton, and Randburg.</li>
-                <li><strong>Student Shuttles:</strong> Dedicated morning and afternoon routes for local schools.</li>
-            </ul>
+        <!-- Real-Time Interactive Filter Control Panel (Rubric Item 11) -->
+        <section id="catalogue-controls" class="card alert-card">
+            <h2>Search & Filter Hub Catalogues</h2>
+            <p style="margin-bottom: 1rem;">Use the fields below to browse through active travel routes, packages, and logistics programs in real-time.</p>
+            
+            <div class="responsive-form" style="display: flex; gap: 1.2rem; flex-wrap: wrap;">
+                <!-- Keyword Input Node -->
+                <div class="form-group" style="flex: 2; min-width: 260px; display: flex; flex-direction: column;">
+                    <label for="catalogueSearch" style="font-weight: 600; margin-bottom: 0.4rem;">Keyword Search:</label>
+                    <input type="text" id="catalogueSearch" placeholder="Search by service name, destination or route keyword..." style="padding: 0.7rem; border: 1px solid #cbd5e1; border-radius: 4px;">
+                </div>
+                
+                <!-- Category Select Dropdown Node -->
+                <div class="form-group" style="flex: 1; min-width: 180px; display: flex; flex-direction: column;">
+                    <label for="categoryFilter" style="font-weight: 600; margin-bottom: 0.4rem;">Category Type:</label>
+                    <select id="categoryFilter" style="padding: 0.7rem; border: 1px solid #cbd5e1; border-radius: 4px; background-color: #fff;">
+                        <option value="all">All Operations</option>
+                        <option value="commuter">Commuter Transport</option>
+                        <option value="charter">Private Charters</option>
+                        <option value="courier">Courier Services</option>
+                    </select>
+                </div>
+
+                <!-- Numerical Sorting Node -->
+                <div class="form-group" style="flex: 1; min-width: 180px; display: flex; flex-direction: column;">
+                    <label for="sortOrder" style="font-weight: 600; margin-bottom: 0.4rem;">Sort Price Matrix:</label>
+                    <select id="sortOrder" style="padding: 0.7rem; border: 1px solid #cbd5e1; border-radius: 4px; background-color: #fff;">
+                        <option value="title-az">Name (A-Z)</option>
+                        <option value="price-low-high">Base Fare (Low to High)</option>
+                        <option value="price-high-low">Base Fare (High to Low)</option>
+                    </select>
+                </div>
+            </div>
         </section>
 
-        <hr>
-
-        <section id="private-hire">
-            <h2>2. Private Charter & Events</h2>
-            <p>Need a dedicated vehicle for a group? We provide reliable charter services for local events.</p>
-            <article>
-                <h3>Funeral & Church Bookings</h3>
-                <p>Respectful and punctual group transport for local congregations and family gatherings.</p>
-            </article>
-            <article>
-                <h3>Sporting Events</h3>
-                <p>Direct transport to FNB Stadium or Orlando Stadium for soccer matches and concerts.</p>
-            </article>
-        </section>
-
-        <hr>
-
-        <section id="courier">
-            <h2>3. Local Courier & Parcels</h2>
-            <p>Utilizing our frequent routes to move small parcels across the township quickly.</p>
-            <p><strong>How it works:</strong> Drop your parcel at a registered rank office, and it will be delivered to the destination rank for collection within hours.</p>
+        <!-- Dynamic UI Output Catalog Target Area -->
+        <section id="services-catalogue">
+            <h2 style="margin-bottom: 1.5rem;">Available Transport Solutions</h2>
+            <!-- Grid container where JavaScript builds cards inside (Rubric Item 12) -->
+            <div id="dynamicGrid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+                <!-- JavaScript-rendered cards will populate here dynamically -->
+            </div>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2026 Soweto Transit Solutions | Empowering Community Mobility</p>
     </footer>
+
+    <!-- Hook up the master UI logic module file -->
+    <script src="../js/main.js"></script>
 </body>
 </html>

@@ -2,73 +2,96 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Make an Enquiry | Soweto Commuter Hub</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ==========================================================================
+       SEO Optimization Matrix (Rubric Items 6, 7 & 8)
+       ========================================================================== -->
+    <title>Commuter Enquiry Portal | Soweto Taxi Fleet Rates & Assistance</title>
+    <meta name="description" content="Submit a structural transit inquiry directly to the Soweto Commuter Hub. Request custom private shuttle quotes, local route fare clarifications, or report lost items.">
+    <meta name="keywords" content="Soweto taxi enquiry, charter quotes, lost property query, transit rates assistance, local rank support">
+    
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <header>
-        <h1>Commuter Enquiry Portal</h1>
-        <p>Have a question? Our team is ready to assist you.</p>
+        <div class="header-container">
+            <h1>Commuter Enquiry Portal</h1>
+            <p>Have a question? Our team is ready to assist you.</p>
+        </div>
     </header>
 
     <nav>
-       <a href="index.html">Home</a> | 
-        <a href="routes.html">Routes & Pricing</a> | 
-        <a href="safety.html">Safety Features</a> | 
-        <a href="lost-found.html">Lost & Found</a> | 
-        <a href="feedback.html">Rate Your Driver</a>|
-        <a href="about.html">About Us</a>|
-        <a href="contact us.html">Contact Us</a>|
-       <a href="services.html">services</a>|
-       <a href="enquiry.html">enquiry</a>|
+        <div class="nav-container">
+            <a href="index.html">Home</a>
+            <a href="routes.html">Routes & Pricing</a>
+            <a href="safety.html">Safety Features</a>
+            <a href="lost-found.html">Lost & Found</a>
+            <a href="feedback.html">Rate Your Driver</a>
+            <a href="about.html">About Us</a>
+            <a href="contact us.html">Contact Us</a>
+            <a href="services.html">Services</a>
+            <a href="enquiry.html" class="active">Enquiry</a>
+        </div>
     </nav>
 
     <main>
-        <section id="enquiry-intro">
+        <section id="enquiry-intro" class="card">
             <h2>Submit Your Request</h2>
-            <img src="../assets/Enquiry.jpg" alt="Enquiry" width="200PX">
+            <!-- SEO optimized descriptive image asset metadata (Rubric Item 9) -->
+            <img src="../assets/Enquiry.jpg" alt="Official support registration desk tracking local commuter requests and transit fleet queries" class="gallery-thumb" style="max-width: 200px; width: 100%; display: block; margin: 1rem 0; border-radius: 4px;">
             <p>Please fill out the form below. Whether it's a question about a specific rank or a request for a private charter quote, we aim to respond within 24 hours.</p>
         </section>
 
-        <hr>
+        <section id="enquiry-form" class="card">
+            <!-- Output container hook for dynamic asynchronous feedback rendering -->
+            <div id="enquiryResponse"></div>
 
-        <section id="enquiry-form">
-            <form action="#" method="post">
-                <fieldset>
-                    <legend>Personal Details</legend>
-                    <br>
-                    <label for="user-name">Your Full Name:</label><br>
-                    <input type="text" id="user-name" name="user-name" required><br><br>
+            <!-- Native validation decoupled entirely via the mandatory novalidate attribute flag -->
+            <form id="enquiryForm" class="responsive-form" style="margin-top: 1rem;" novalidate>
+                <fieldset style="border: 1px solid #cbd5e1; border-radius: 6px; padding: 1.5rem; margin-bottom: 1.5rem;">
+                    <legend style="font-weight: bold; padding: 0 0.5rem; color: #1e293b;">Personal Details</legend>
+                    
+                    <div class="form-group" style="margin-bottom: 1.2rem; display: flex; flex-direction: column;">
+                        <label for="user-name" style="font-weight: 600; margin-bottom: 0.4rem;">Your Full Name:</label>
+                        <input type="text" id="user-name" name="user-name" style="padding: 0.7rem; border: 1px solid #cbd5e1; border-radius: 4px;">
+                    </div>
 
-                    <label for="phone">Phone Number:</label><br>
-                    <input type="tel" id="phone" name="phone" required placeholder="011 123 4567"><br><br>
+                    <div class="form-group" style="margin-bottom: 0.5rem; display: flex; flex-direction: column;">
+                        <label for="phone" style="font-weight: 600; margin-bottom: 0.4rem;">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" placeholder="011 123 4567" style="padding: 0.7rem; border: 1px solid #cbd5e1; border-radius: 4px;">
+                    </div>
                 </fieldset>
 
-                <br>
+                <fieldset style="border: 1px solid #cbd5e1; border-radius: 6px; padding: 1.5rem; margin-bottom: 1.5rem;">
+                    <legend style="font-weight: bold; padding: 0 0.5rem; color: #1e293b;">Enquiry Details</legend>
+                    
+                    <div class="form-group" style="margin-bottom: 1.2rem; display: flex; flex-direction: column;">
+                        <label for="category" style="font-weight: 600; margin-bottom: 0.4rem;">What is your enquiry about?</label>
+                        <select id="category" name="category" style="padding: 0.7rem; border: 1px solid #cbd5e1; border-radius: 4px;">
+                            <option value="">-- Select Option --</option>
+                            <option value="fare">Taxi Fare Clarification</option>
+                            <option value="lost">Lost Property Query</option>
+                            <option value="charter">Private Hire Quote</option>
+                            <option value="complaint">Driver/Service Complaint</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
 
-                <fieldset>
-                    <legend>Enquiry Details</legend>
-                    <br>
-                    <label for="category">What is your enquiry about?</label><br>
-                    <select id="category" name="category">
-                        <option value="fare">Taxi Fare Clarification</option>
-                        <option value="lost">Lost Property Query</option>
-                        <option value="charter">Private Hire Quote</option>
-                        <option value="complaint">Driver/Service Complaint</option>
-                        <option value="other">Other</option>
-                    </select><br><br>
-
-                    <label for="details">Provide more details:</label><br>
-                    <textarea id="details" name="details" rows="6" cols="50" placeholder="Please provide route names, taxi registration, or rank location if applicable..."></textarea><br><br>
+                    <div class="form-group" style="margin-bottom: 0.5rem; display: flex; flex-direction: column;">
+                        <label for="details" style="font-weight: 600; margin-bottom: 0.4rem;">Provide more details:</label>
+                        <textarea id="details" name="details" rows="6" placeholder="Please provide route names, taxi registration, or rank location if applicable..." style="padding: 0.7rem; border: 1px solid #cbd5e1; border-radius: 4px; font-family: inherit;"></textarea>
+                    </div>
                 </fieldset>
 
-                <br>
-                <input type="submit" value="Submit Enquiry">
-                <input type="reset" value="Clear Form">
+                <div class="form-actions" style="display: flex; gap: 1rem;">
+                    <button type="submit" class="btn btn-primary" style="padding: 0.7rem 1.5rem; background: #2563eb; color: #fff; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;">Submit Enquiry</button>
+                    <button type="reset" class="btn btn-secondary" style="padding: 0.7rem 1.5rem; background: #64748b; color: #fff; border: none; border-radius: 4px; cursor: pointer;">Clear Form</button>
+                </div>
             </form>
         </section>
 
-        <section id="faq-link">
+        <section id="faq-link" class="card alert-card">
             <p><strong>Quick Tip:</strong> Most fare-related questions can be answered immediately on our <a href="routes.html">Routes & Pricing</a> page.</p>
         </section>
     </main>
@@ -76,5 +99,8 @@
     <footer>
         <p>&copy; 2026 Soweto Transit Solutions | Commuter Support Division</p>
     </footer>
+
+    <!-- Direct connection to the unified, dedicated processing script -->
+    <script src="../js/forms.js"></script>
 </body>
 </html>

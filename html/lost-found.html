@@ -2,39 +2,68 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Lost & Found</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost & Found | Soweto Commuter Hub</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <header>
-        <h1>Recover Your Items</h1>
+        <div class="header-container">
+            <h1>Recover Your Items</h1>
+            <p>Assisting commuters in tracking and retrieving misplaced personal items safely.</p>
+        </div>
     </header>
+
     <nav>
-        <a href="index.html">Home</a> | 
-        <a href="routes.html">Routes & Pricing</a> | 
-        <a href="safety.html">Safety Features</a> | 
-        <a href="lost-found.html">Lost & Found</a> | 
-        <a href="feedback.html">Rate Your Driver</a>|
-        <a href="about.html">About Us</a>|
-        <a href="contact us.html">Contact Us</a>|
-       <a href="services.html">services</a>|
-       <a href="enquiry.html">enquiry</a>|
+        <div class="nav-container">
+            <a href="index.html">Home</a>
+            <a href="routes.html">Routes & Pricing</a>
+            <a href="safety.html">Safety Features</a>
+            <a href="lost-found.html" class="active">Lost & Found</a>
+            <a href="feedback.html">Rate Your Driver</a>
+            <a href="about.html">About Us</a>
+            <a href="contact us.html">Contact Us</a>
+            <a href="services.html">Services</a>
+            <a href="enquiry.html">Enquiry</a>
+        </div>
     </nav>
 
     <main>
-        <h2>Did you leave something behind?</h2><br>
-        <img src="../assets/lost.jpg" alt="Lost Item" width="400px">
-        <p>Provide the taxi association name or the vehicle registration to help us track your item.</p>
-        <form>
-            <label>Association (e.g., WATA/Nanduwe):</label><br>
-            <input type="text"><br><br>
-            <label>Item Description:</label><br>
-            <textarea></textarea><br><br>
-            <button type="button">Search Database</button>
-        </form>
+        <section class="card">
+            <h2>Did you leave something behind?</h2>
+            <!-- Lightbox Interaction Hook Applied via gallery-thumb class -->
+            <img src="../assets/lost.jpg" alt="Lost Item Tracking" class="gallery-thumb" style="max-width: 400px; width: 100%; display: block; margin: 1.5rem 0; border-radius: 4px; cursor: pointer;">
+            <p>We understand how stressful misplacing property can be. Provide the taxi association name, primary route parameters, or the target vehicle registration number plate to help our rank marshals track down your item within our network.</p>
+        </section>
+
+        <section id="tracking-search" class="card alert-card">
+            <h3>Item Tracking Repository Search</h3>
+            <p style="margin-bottom: 1.5rem; font-size: 0.9rem; color: var(--text-muted);">Fill out the historical data reference points below to run an analysis across active rank intake lists.</p>
+            
+            <form id="lostFoundForm" class="responsive-form" action="#" method="get">
+                <div class="form-group">
+                    <label for="associationInput">Association Code / Fleet Number (e.g., WATA, Nanduwe):</label>
+                    <input type="text" id="associationInput" name="association" placeholder="Enter association or registration...">
+                </div>
+
+                <div class="form-group">
+                    <label for="itemDescription">Distinctive Item Description:</label>
+                    <textarea id="itemDescription" name="description" rows="4" placeholder="Describe the item (include color, brand, or specific contents)..."></textarea>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Search Regional Database</button>
+                    <button type="reset" class="btn btn-secondary">Reset Fields</button>
+                </div>
+            </form>
+        </section>
     </main>
+
     <footer>
-        <p>2026 Soweto Commuter Hub | Serving our community| Registered under the Soweto Taxi Association</p>
+        <p>&copy; 2026 Soweto Commuter Hub | Serving our community | Registered under the Soweto Taxi Association</p>
     </footer>
+
+    <!-- LINK MASTER SCRIPT FOR COMPONENT RENDERING -->
+    <script src="../js/main.js"></script>
 </body>
 </html>

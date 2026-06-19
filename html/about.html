@@ -2,48 +2,67 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Soweto commuter Hub</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Soweto Commuter Hub</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <header>
-        <h1>About us</h1>
-        <p>Our story is deeply connected to the Soweto Community</p>
-         <nav>
-          <a href="index.html">Home</a> | 
-        <a href="routes.html">Routes & Pricing</a> | 
-        <a href="safety.html">Safety Features</a> | 
-        <a href="lost-found.html">Lost & Found</a> | 
-        <a href="feedback.html">Rate Your Driver</a>|
-        <a href="about.html">About Us</a>|
-        <a href="contact us.html">Contact Us</a>|
-       <a href="services.html">services</a>|
-       <a href="enquiry.html">enquiry</a>|
-    </nav><hr>
-
+        <div class="header-container">
+            <h1>About Us</h1>
+            <p>Our story is deeply connected to the Soweto Community.</p>
+        </div>
     </header>
-    <main>
-        <section id="history">
-            <h2>Our History</h2>
-            <img src="../assets/about us.webp" alt="about us" width="300px">
-            <p>Soweto Transit Solutions emerged from the late 70s when township entrepreneurs stepped into the vaccum created by an unwillingness to invest in safe , affordable public transport for majority of workers. Starting as a small association of local drivers in Orlando , we have grown into a coordinated network that oversees thousands of daily trips between Soweto and Johannesburg CBD. </p>
-        </section>
-         <section id="Our Mission" ></section>
-            <h3>Our Mission</h3>
-            <p>To provide safe, reliable, and affordable public transport solutions that connect the Soweto community to the economic opportunities of Johannesburg CBD through innovative solutions like digital ticket sales, booking options and real time fare updates. We aim to make commuting easy and accessible for everyone</p>
-        </section>
-        <section id="Team Members">
-          <h4>Meet our Leadership Team</h4>
-          <p>Our board consists of industry veterans and community leaders who are passionate about improving the daily commute for Soweto residents. From our CEO, who has over 20 years of experience in the transport sector, to our safety officer who is a former traffic cop, our team is dedicated to ensuring that every trip is a safe and pleasant experience for our passengers.</p>
-          <li><strong>Chief Operations Officer:</strong> Philile Khumalo</li>
-            <li><strong>Safety Officer:</strong> Khulani Mthembu</li>
-            <li><strong>Customer Service Manager:</strong> Sabelo Kunene</li>
-            <li><strong>Finance Manager:</strong> Lufeziwe Mncube</li>
 
+    <nav>
+        <div class="nav-container">
+            <a href="index.html">Home</a>
+            <a href="routes.html">Routes & Pricing</a>
+            <a href="safety.html">Safety Features</a>
+            <a href="lost-found.html">Lost & Found</a>
+            <a href="feedback.html">Rate Your Driver</a>
+            <a href="about.html" class="active">About Us</a>
+            <a href="contact us.html">Contact Us</a>
+            <a href="services.html">Services</a>
+            <a href="enquiry.html">Enquiry</a>
+        </div>
+    </nav>
+
+    <main>
+        <!-- HISTORY SECTION CARD -->
+        <section id="history" class="card">
+            <h2>Our History</h2>
+            <!-- Lightbox Interaction Hook Applied via gallery-thumb class -->
+            <img src="../assets/about us.webp" alt="Historical Soweto Public Transit" class="gallery-thumb" style="max-width: 300px; width: 100%; display: block; margin: 1rem 0; border-radius: 4px; cursor: pointer;">
+            <p>Soweto Transit Solutions emerged from the late 70s when township entrepreneurs stepped into the vacuum created by an unwillingness to invest in safe, affordable public transport for the majority of workers. Starting as a small association of local drivers in Orlando, we have grown into a coordinated network that oversees thousands of daily trips between Soweto and the Johannesburg CBD.</p>
+        </section>
+
+        <!-- MISSION SECTION CARD -->
+        <section id="mission" class="card alert-card">
+            <h3>Our Mission</h3>
+            <p>To provide safe, reliable, and affordable public transport solutions that connect the Soweto community to the economic opportunities of the Johannesburg CBD through innovative solutions like digital ticket sales, booking options, and real-time fare updates. We aim to make commuting easy and accessible for everyone.</p>
+        </section>
+
+        <!-- LEADERSHIP TEAM CARD -->
+        <section id="team" class="card">
+            <h3>Meet our Leadership Team</h3>
+            <p style="margin-bottom: 1rem;">Our board consists of industry veterans and community leaders who are passionate about improving the daily commute for Soweto residents. From our CEO, who has over 20 years of experience in the transport sector, to our safety officer who is a former traffic official, our team is dedicated to ensuring that every single trip is a safe and pleasant experience for our passengers.</p>
+            
+            <ul class="styled-list">
+                <li><strong>Chief Operations Officer:</strong> Philile Khumalo</li>
+                <li><strong>Safety Officer:</strong> Khulani Mthembu</li>
+                <li><strong>Customer Service Manager:</strong> Sabelo Kunene</li>
+                <li><strong>Finance Manager:</strong> Lufeziwe Mncube</li>
+            </ul>
         </section>
     </main>
+
     <footer>
-    <p>2026 Soweto Commuter Hub | Serving our community| Registered under the Soweto Taxi Association</p>
+        <p>&copy; 2026 Soweto Commuter Hub | Serving our community | Registered under the Soweto Taxi Association</p>
     </footer>
+
+    <!-- MASTER JS ENGAGEMENT ENGINE SCRIPTS -->
+    <script src="../js/main.js"></script>
 </body>
 </html>
+

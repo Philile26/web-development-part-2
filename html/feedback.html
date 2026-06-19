@@ -2,43 +2,87 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Rate Your Driver</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Rate Your Driver | Soweto Taxi Fleet Safety & Feedback Portal</title>
+    <meta name="description" content="Submit formal commuter safety assessments, rate driving quality performance, and file taxi asset infrastructure reviews for the Soweto Commuter Hub.">
+    <meta name="keywords" content="Rate Soweto taxi driver, fleet safety metrics, public transit complaints, Bara rank driver feedback, minibus registration tracking">
+    
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <header>
-        <h1>Driver Feedback</h1>
+        <div class="header-container">
+            <h1>Driver Feedback</h1>
+            <p>Help us maintain excellent safety standards across all Soweto transit operations.</p>
+        </div>
     </header>
+
     <nav>
-      <a href="index.html">Home</a> | 
-        <a href="routes.html">Routes & Pricing</a> | 
-        <a href="safety.html">Safety Features</a> | 
-        <a href="lost-found.html">Lost & Found</a> | 
-        <a href="feedback.html">Rate Your Driver</a>|
-        <a href="about.html">About Us</a>|
-        <a href="contact us.html">Contact Us</a>|
-       <a href="services.html">services</a>|
-       <a href="enquiry.html">enquiry</a>|
+        <div class="nav-container">
+            <a href="index.html">Home</a>
+            <a href="routes.html">Routes & Pricing</a>
+            <a href="safety.html">Safety Features</a>
+            <a href="lost-found.html">Lost & Found</a>
+            <a href="feedback.html" class="active">Rate Your Driver</a>
+            <a href="about.html">About Us</a>
+            <a href="contact us.html">Contact Us</a>
+            <a href="services.html">Services</a>
+            <a href="enquiry.html">Enquiry</a>
+        </div>
     </nav>
 
     <main>
-        <h2>How was your trip today?</h2>
-        <img src="../assets/customer-feedback.jpg" alt="feedback" width="400px">
-        <form>
-            <p>Rate the driving quality:</p>
-            <input type="radio" name="rating"> Excellent<br>
-            <input type="radio" name="rating"> Average<br>
-            <input type="radio" name="rating"> Poor/Dangerous<br><br>
+        <section class="card">
+            <h2>How was your trip today?</h2>
+            <img src="../assets/customer-feedback.jpg" alt="Official premium digital terminal for submitting verified township commuter feedback data logs" class="lightbox-trigger" style="max-width: 400px; width: 100%; display: block; margin: 1.5rem 0; border-radius: 4px; border: 1px solid var(--border-lux);">
+            <p>We take public accountability seriously. Share anonymous operational reports regarding driver manners, compliance habits, and mechanical comfort levels below.</p>
+        </section>
+
+        <section id="feedback-terminal" class="card">
+            <h3>Commuter Rating Form</h3>
+            <p style="margin-bottom: 1.5rem; font-size: 0.95rem; color: var(--text-muted);">Please provide honest insights. Dangerous driving patterns trigger immediate review logs.</p>
             
-            <label>Vehicle Registration Number:</label><br>
-            <input type="text" placeholder="e.g. BB 12 CC GP"><br><br>
-            
-            <button type="submit">Submit Report</button>
-        </form>
+            <div id="feedbackFormStatus" style="margin-bottom: 1.5rem;"></div>
+
+            <form id="feedbackForm" class="responsive-form" novalidate>
+                
+                <div class="form-group">
+                    <label style="font-weight: 700; margin-bottom: 0.5rem; display: block; color: var(--accent-gold);">Rate the driving quality:</label>
+                    
+                    <div style="margin-bottom: 0.6rem; display: flex; align-items: center; gap: 0.75rem;">
+                        <input type="radio" id="rateExcellent" name="rating" value="excellent" style="width: auto; cursor: pointer;">
+                        <label for="rateExcellent" style="font-weight: 500; cursor: pointer; color: var(--text-pure);">Excellent & Safe Operations</label>
+                    </div>
+                    
+                    <div style="margin-bottom: 0.6rem; display: flex; align-items: center; gap: 0.75rem;">
+                        <input type="radio" id="rateAverage" name="rating" value="average" style="width: auto; cursor: pointer;">
+                        <label for="rateAverage" style="font-weight: 500; cursor: pointer; color: var(--text-pure);">Average / Satisfactory Route Travel</label>
+                    </div>
+                    
+                    <div style="margin-bottom: 0.6rem; display: flex; align-items: center; gap: 0.75rem;">
+                        <input type="radio" id="ratePoor" name="rating" value="poor" style="width: auto; cursor: pointer;">
+                        <label for="ratePoor" style="font-weight: 500; cursor: pointer; color: var(--error-red);">Poor / Dangerous Operational Habits</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="vehReg" style="color: var(--accent-gold);">Vehicle Registration Number (Gauteng GP):</label>
+                    <input type="text" id="vehReg" name="vehReg" placeholder="e.g. BB 12 CC GP or FL 45 GP">
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Submit Feedback Report</button>
+                    <button type="reset" class="btn btn-secondary">Clear Fields</button>
+                </div>
+            </form>
+        </section>
     </main>
     
     <footer>
-        <p>2026 Soweto Commuter Hub | Serving our community| Registered under the Soweto Taxi Association</p>
+        <p>&copy; 2026 Soweto Commuter Hub | Serving our community | Registered under the Soweto Taxi Association</p>
     </footer>
+
+    <script src="../js/feedback-processor.js"></script>
 </body>
 </html>
